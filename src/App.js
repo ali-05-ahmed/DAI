@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
@@ -7,18 +7,12 @@ import { initweb3, sendDAI, sendEth } from './store/adoptSlice';
 function App() {
   const dispatch = useDispatch()
 
-  const web3 = useSelector((state) => {
-    console.log(state)
-    return state.adoptReducer.web3
-  })
+
 
   const address = useSelector((state) => {
     return state.adoptReducer.address
   })
 
-  const balance = useSelector((state) => {
-    return state.adoptReducer.balance
-  })
 
   const txCount = useSelector((state) => {
     return state.adoptReducer.txCount
